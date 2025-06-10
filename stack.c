@@ -1,35 +1,67 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h> 
 
 #include "stack.h"
 
-#define TAM 100
 
-struct stack {
-    int *v;
-    int topo;
-};
 
 Stack* new_stack(int size) {
-    Stack* nova_pilha = malloc(sizeof(Stack));
-    nova_pilha -> v = malloc(sizeof(int)*size);
-    nova_pilha -> topo = 0;
-    return nova_pilha
-    ;
+    Stack* self = malloc(sizeof(Stack));
+    if (self == NULL) {
+        perror("Erro ao alocar memória para a pilha");
+        exit(EXIT_FAILURE);
+    }
+    self->v = malloc(sizeof(int) * size);
+    if (self->v == NULL) {
+        perror("Erro ao alocar memória para os elementos da pilha");
+        free(self); 
+        exit(EXIT_FAILURE);
+    }
+    self->topo = 0;
+    self->max_size = size; 
+    return self;
 }
 
 void stack_push(Stack* s, int value){
-    s -> v[s -> topo++] = value;
+    if (s == NULL) {
+        fprintf(stderr, "Erro: Pilha não inicializada (NULL).\n");
+        return;
+    }
+    if (s->topo >= s->max_size) {
+        fprintf(stderr, "Erro: Pilha cheia (overflow)!\n");
+        return; 
+    }
+    s->v[s->topo++] = value;
 }
 
 int stack_pop (Stack* s){
-    return s -> v[--s -> topo];
+    if (s == NULL) {
+        fprintf(stderr, "Erro: Pilha não inicializada (NULL).\n");
+       
+        exit(EXIT_FAILURE);
+    }
+    if (s->topo == 0) {
+        fprintf(stderr, "Erro: Pilha vazia (underflow)!\n");
+       
+        return 0; 
+    }
+    return s->v[--s->topo];
 }
 
 void stack_print(Stack* s){
+    if (s == NULL) {
+        fprintf(stderr, "Erro: Pilha não inicializada (NULL) para impressão.\n");
+        return;
+    }
     printf("------------------------------------\n");
-    for (int i = 0; i < s -> topo; i++) {
-        printf ("%d\n", s -> v[i]);
+    if (s->topo == 0) {
+        printf("Pilha vazia.\n");
+    } else {
+        for (int i = 0; i < s->topo; i++) {
+            printf ("%d\n", s->v[i]);
+        }
     }
     printf("------------------------------------\n");
 }
+
