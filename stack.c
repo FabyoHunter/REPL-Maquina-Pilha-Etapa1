@@ -65,6 +65,12 @@ void stack_print(Stack* s){
     printf("------------------------------------\n");
 }
 
-void stack_print(Stack* s);
-void free_stack(Stack* s); // Adicione esta linha
-#endif
+
+void stack_print(Stack* s){ /* ... */ }
+
+void free_stack(Stack* s) {
+    if (s != NULL) {
+        free(s->v); 
+        free(s);    
+    }
+}
