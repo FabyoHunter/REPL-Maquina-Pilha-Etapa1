@@ -16,7 +16,7 @@ void interpret (const char *source) {
     char arg[10];
 
     sscanf (source, "%s%s", op, arg);
-    // printf("operaÁ„o: %s\n", op);
+    // printf("opera√ß√£o: %s\n", op);
     // printf("argumento: %s\n",  arg);
 
     if (strcmp(op, "push") == 0) {
@@ -29,10 +29,16 @@ void interpret (const char *source) {
         int arg1 = stack_pop(s);
         int arg2 = stack_pop(s);
         stack_push(s, arg1 - arg2);
-    } else if (strcmp(op, "div") == 0) {
-        int arg1 = stack_pop(s);
-        int arg2 = stack_pop(s);
-        stack_push(s, arg1 / arg2);
+   } else if (strcmp(op, "div") == 0) {
+    int arg1 = stack_pop(s); 
+    int arg2 = stack_pop(s); 
+    if (arg2 == 0) {
+        fprintf(stderr, "Erro: Divis√£o por zero!\n");
+        stack_push(s, arg2);
+        stack_push(s, arg1);
+        return;
+    }
+    stack_push(s, arg1 / arg2); 
     } else if (strcmp(op, "mul") == 0) {
         int arg1 = stack_pop(s);
         int arg2 = stack_pop(s);
