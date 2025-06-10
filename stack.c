@@ -11,10 +11,11 @@ struct stack {
 };
 
 Stack* new_stack(int size) {
-    Stack* self = malloc(sizeof(Stack));
-    self -> v = malloc(sizeof(int)*size);
-    self -> topo = 0;
-    return self;
+    Stack* nova_pilha = malloc(sizeof(Stack));
+    nova_pilha -> v = malloc(sizeof(int)*size);
+    nova_pilha -> topo = 0;
+    return nova_pilha
+    ;
 }
 
 void stack_push(Stack* s, int value){
