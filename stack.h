@@ -1,19 +1,18 @@
-#ifndef stack_h
-#define stack_h
+#ifndef STACK_H
+#define STACK_H
+
 
 typedef struct stack {
-    int *v;
-    int topo;
+    int *v;         
+    int topo;    
     int max_size; 
-} Stack; 
-
-Stack* new_stack(int size);
-void stack_push(Stack* s, int value);
-int stack_pop (Stack* s);
-void stack_print(Stack* s);
-
-void stack_print(Stack* s);
-void free_stack(Stack* s);
+} Stack;
 
 
-#endif
+Stack* new_stack(int size);             
+void stack_push(Stack* s, int value);  
+int stack_pop(Stack* s);                
+void stack_print(Stack* s);             
+void free_stack(Stack* s);             
+
+#endif 
