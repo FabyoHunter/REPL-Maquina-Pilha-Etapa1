@@ -4,8 +4,8 @@
 typedef struct stack {
     int *v;
     int topo;
-    int max_size; // Adicionei esta linha
-} Stack; // A primeira declaração de typedef está aqui na linha 8
+    int max_size; 
+} Stack; 
 
 Stack* new_stack(int size);
 void stack_push(Stack* s, int value);
