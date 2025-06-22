@@ -1,0 +1,95 @@
+# depslib dependency file v1.0
+1733876017 source:c:\users\bicta\desktop\novaetapa\main.c
+	<stdio.h>
+	"interpret.h"
+	"stack.h"
+
+1733353941 c:\users\bicta\desktop\novaetapa\interpret.h
+
+1733877109 source:c:\users\bicta\desktop\novaetapa\interpret.c
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	"interpret.h"
+	"stack.h"
+
+1733353860 c:\users\bicta\desktop\novaetapa\stack.h
+
+1733876951 source:c:\users\bicta\desktop\novaetapa\stack.c
+	<stdlib.h>
+	<stdio.h>
+	"stack.h"
+
+1733877170 source:d:\users\samuel\downloads\novaetapa\novaetapa\interpret.c
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	"interpret.h"
+	"stack.h"
+
+1733353942 d:\users\samuel\downloads\novaetapa\novaetapa\interpret.h
+
+1733353862 d:\users\samuel\downloads\novaetapa\novaetapa\stack.h
+
+1733876018 source:d:\users\samuel\downloads\novaetapa\novaetapa\main.c
+	<stdio.h>
+	"interpret.h"
+	"stack.h"
+
+1733876952 source:d:\users\samuel\downloads\novaetapa\novaetapa\stack.c
+	<stdlib.h>
+	<stdio.h>
+	"stack.h"
+
+1733877170 source:d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 1\interpret.c
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	"interpret.h"
+	"stack.h"
+
+1733353942 d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 1\interpret.h
+
+1733353862 d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 1\stack.h
+
+1733876018 source:d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 1\main.c
+	<stdio.h>
+	"interpret.h"
+	"stack.h"
+
+1733876952 source:d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 1\stack.c
+	<stdlib.h>
+	<stdio.h>
+	"stack.h"
+
+1736204671 source:d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 2\main.c
+	<stdio.h>
+	"interpret.h"
+	"stack.h"
+	"list.h"
+
+1733353942 d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 2\interpret.h
+
+1733353862 d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 2\stack.h
+
+1733876952 source:d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 2\stack.c
+	<stdlib.h>
+	<stdio.h>
+	"stack.h"
+
+1736200176 source:d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 2\interpret.c
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	"interpret.h"
+	"stack.h"
+	"list.h"
+
+1736188041 d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 2\list.h
+
+1736187190 source:d:\users\samuel\documents\estudos\hugosamuel-io-um-repl-para-uma-maquina-baseada-em-pilha-hugo-alana-joao\pilha - etapa 2\list.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"list.h"
+
