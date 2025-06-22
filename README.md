@@ -45,7 +45,7 @@ Nesta etapa, o interpretador foi expandido para incluir suporte a variáveis nom
 ### Exemplo de Interação:
 
 A seguir, um exemplo de sessão no REPL demonstrando o uso das novas funcionalidades de variáveis:
-
+```
 push 42
 push 5
 add
@@ -65,12 +65,19 @@ push 6
 add
 print
 109
-
+```
 Para verificar o estado interno da MV:
 
+```  
 debug
 --- Conteudo da Pilha ---
-(Pilha pode estar vazia ou conter o último resultado)
+(Pilha pode estar vazia ou conter o Último resultado)
+-------------------------- <-- Adicione essa linha para fechar o "Conteúdo da Pilha"
+--- Variaveis ---
+b = 64
+a = 39
+--------------------------
+``` 
 
 ### Como Compilar e Executar
 
