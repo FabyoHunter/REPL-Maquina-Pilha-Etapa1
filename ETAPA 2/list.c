@@ -16,7 +16,7 @@ struct list {
 };
 
 static struct node* list_find(const List* l, const char* key) {
-    struct node* next = l ? l->first : NULL;
+    struct node* next = l->first;
     while (next) {
         if (strncmp(next->key, key, KEY_SIZE) == 0) {
             return next;
@@ -33,6 +33,7 @@ List* new_list(void) {
 
 void list_append(List* l, const char* key, int value) {
     if (!l || !key) return;
+
     struct node* node = calloc(1, sizeof(struct node));
     strncpy(node->key, key, KEY_SIZE - 1);
     node->key[KEY_SIZE - 1] = '\0';
@@ -43,12 +44,17 @@ void list_append(List* l, const char* key, int value) {
 
 int list_get(const List* l, const char* key) {
     struct node* n = list_find(l, key);
-    return n ? n->value : 0;
+    if (n) {
+        return n->value;
+    }
+    return 0;
 }
 
 void list_set(List* l, const char* key, int value) {
     struct node* n = list_find(l, key);
-    if (n) n->value = value;
+    if (n) {
+        n->value = value;
+    }
 }
 
 int list_exist(const List* l, const char* key) {
@@ -56,11 +62,13 @@ int list_exist(const List* l, const char* key) {
 }
 
 void list_print(const List* l) {
-    struct node* next = l ? l->first : NULL;
+    struct node* next = l->first;
+    printf("--------------------------\n");
     while (next) {
-        printf("%s -> %d\n", next->key, next->value);
+        printf("%s = %d\n", next->key, next->value);
         next = next->next;
     }
+    printf("--------------------------\n");
 }
 
 void free_list(List* l) {
