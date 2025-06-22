@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-
 #include "stack.h"
 
 struct stack {
@@ -29,17 +28,17 @@ void stack_push(Stack* s, int value) {
 }
 
 int stack_pop(Stack* s) {
-    if (!s || s->topo <= 0) return 0;
+    if (!s || s->topo <= 0) return 0; 
     return s->v[--s->topo];
 }
 
 void stack_print(const Stack* s) {
     if (!s) return;
-    printf("------------------------------------\n");
+    printf("--------------------------\n");
     for (int i = 0; i < s->topo; i++) {
         printf("%d\n", s->v[i]);
     }
-    printf("------------------------------------\n");
+    printf("--------------------------\n");
 }
 
 void free_stack(Stack* s) {
