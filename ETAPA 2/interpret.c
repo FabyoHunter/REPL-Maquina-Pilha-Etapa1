@@ -18,7 +18,7 @@ void init(void) {
     l = new_list();
 }
 
-void interpret(const char *source) {
+int interpret(const char *source) {
     if (!source || source[0] == '\0') return;
 
     char op[OP_SIZE] = {0};
